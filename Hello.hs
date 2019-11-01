@@ -19,7 +19,7 @@ main :: IO ()
 main = do
   args <- getArgs
   case args of
-    [] -> putStrLn "usage: ./Hello [in-file-js] [out-file-exec]"
+    [] -> putStrLn "usage: ./Hello in-file-js [out-file-exec]"
     srcFile : argsTl ->
       let (srcFileBase, srcFileExts) = splitExtension srcFile in
       if map toLower srcFileExts /= ".js" then
