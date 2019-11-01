@@ -25,5 +25,5 @@ main = do
       if map toLower srcFileExts /= ".js" then
         putStrLn "sorry we only accept .js files"
       else
-        copyFile srcFile $ targetFile srcFile argsTl
+        copyFile srcFile $ targetFile srcFileBase argsTl
 
